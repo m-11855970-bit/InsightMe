@@ -241,8 +241,7 @@ elif st.session_state.soalan_ke == 19:
     if col2.button("B. soft than firm"):
         next_question("B")
         st.rerun()
-
- elif st.session_state.soalan_ke == 20:
+elif st.session_state.soalan_ke == 20:
         st.header("Question 20")
         st.write("You are more comfortable with a job that is")
 
