@@ -13,7 +13,7 @@ def next_question(pilihan):
 # --- LOGIC SOALAN ---
 
 if st.session_state.soalan_ke == 1:
-    st.header("Soalan 1")
+    st.header("Question 1")
     st.write("At a party or banquet, you usually mingle with...")
     
     col1, col2 = st.columns(2)
@@ -25,7 +25,7 @@ if st.session_state.soalan_ke == 1:
         st.rerun()
 
 elif st.session_state.soalan_ke == 2:
-    st.header("Soalan 2")
+    st.header("Question2")
     st.write("Do you prefer logic or emotion?")
     
     col1, col2 = st.columns(2)
@@ -38,13 +38,13 @@ elif st.session_state.soalan_ke == 2:
 
 # --- RESULT ---
 else:
-    st.header("Keputusan Anda!")
-    st.write(f"Jawapan yang anda pilih: {st.session_state.jawapan}")
-    if st.button("Ulang Semula"):
+    st.header("Result!")
+    st.write(f"Answer that you chose: {st.session_state.jawapan}")
+    if st.button("Repeat"):
         st.session_state.soalan_ke = 1
         st.session_state.jawapan = []
         st.rerun()
-# Ujian Personaliti MBTI - 100 Soalan
+# Ujian Personaliti MBTI - 35 Soalan
 
 skorE = skorI = 0
 skorS = skorN = 0
