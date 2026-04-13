@@ -290,7 +290,7 @@ elif st.session_state.soalan_ke == 23:
         st.rerun()
 
     
-    elif st.session_state.soalan_ke == 24:
+elif st.session_state.soalan_ke == 24:
     st.header("Question 24")
     st.write("You are more interested in")
 
@@ -302,7 +302,7 @@ elif st.session_state.soalan_ke == 23:
         next_question("B")
         st.rerun()
 
-   elif st.session_state.soalan_ke == 25:
+elif st.session_state.soalan_ke == 25:
     st.header("Question 25")
     st.write("The most praised person is the one who has strength")
 
@@ -314,7 +314,7 @@ elif st.session_state.soalan_ke == 23:
         next_question("B")
         st.rerun()
 
- elif st.session_state.soalan_ke == 26:
+elif st.session_state.soalan_ke == 26:
     st.header("Question 26")
     st.write("In yourself, the most valued trait is")
 
