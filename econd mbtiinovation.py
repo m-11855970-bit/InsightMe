@@ -245,14 +245,14 @@ elif st.session_state.soalan_ke == 20:
         st.header("Question 20")
         st.write("You are more comfortable with a job that is")
 
-    col1, col2 = st.columns(2)
-    if col1.button("A.Permanent"):
-        next_question("A")
-        st.rerun()
-    if col2.button("B.  Part-time"):
-        next_question("B")
-        st.rerun()
-
+        # Nampak tak? Baris bawah ni kena sejajar dengan st.write kat atas
+        col1, col2 = st.columns(2)
+        if col1.button("A. Permanent"):
+            next_question("A")
+            st.rerun()
+        if col2.button("B. Part-time"):
+            next_question("B")
+            st.rerun()
 elif st.session_state.soalan_ke == 21:
     st.header("Question 21")
     st.write("You prioritize things more")
