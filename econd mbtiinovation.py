@@ -143,8 +143,7 @@ elif st.session_state.soalan_ke == 11:
     if col2.button("B. Friendly"):
         next_question("B")
         st.rerun()
-          "?\n"
-
+        
 elif st.session_state.soalan_ke == 12:
     st.header("Question 12")
     st.write("You are comfortable in making decisions related to?")
@@ -156,7 +155,7 @@ elif st.session_state.soalan_ke == 12:
     if col2.button("B. Moral issues"):
         next_question("B")
         st.rerun()
-          "?\n"
+        
 
 elif st.session_state.soalan_ke == 13:
     st.header("Question 13")
@@ -169,7 +168,7 @@ elif st.session_state.soalan_ke == 13:
     if col2.button("B. randomly"):
         next_question("B")
         st.rerun()
-          "?\n"
+       
 
 elif st.session_state.soalan_ke == 14:
     st.header("Question 14")
@@ -182,7 +181,7 @@ elif st.session_state.soalan_ke == 14:
     if col2.button("B. determined"):
         next_question("B")
         st.rerun()
-          "?\n"
+         
 elif st.session_state.soalan_ke == 15:
     st.header("Question 15")
     st.write("When with others,you usually...")
@@ -194,7 +193,7 @@ elif st.session_state.soalan_ke == 15:
     if col2.button("B. wait for the conversation to start"):
         next_question("B")
         st.rerun()
-          "?\n"
+        
 
 elif st.session_state.soalan_ke == 16:
     st.header("Question 16")
