@@ -277,7 +277,7 @@ elif st.session_state.soalan_ke == 22:
         next_question("B")
         st.rerun()
 
-    elif st.session_state.soalan_ke == 23:
+elif st.session_state.soalan_ke == 23:
     st.header("Question 23")
     st.write("You trust more")
 
