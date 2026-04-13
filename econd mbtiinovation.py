@@ -1,3 +1,49 @@
+import streamlit as st
+
+# 1. Inisialkan "ingatan" kalau belum ada
+if 'soalan_ke' not in st.session_state:
+    st.session_state.soalan_ke = 1
+    st.session_state.jawapan = []
+
+# Fungsi untuk pergi ke soalan seterusnya
+def next_question(pilihan):
+    st.session_state.jawapan.append(pilihan)
+    st.session_state.soalan_ke += 1
+
+# --- LOGIC SOALAN ---
+
+if st.session_state.soalan_ke == 1:
+    st.header("Soalan 1")
+    st.write("At a party or banquet, you usually mingle with...")
+    
+    col1, col2 = st.columns(2)
+    if col1.button("A. Many people including strangers"):
+        next_question("A")
+        st.rerun() # Guna st.rerun() supaya dia terus refresh ke soalan 2
+    if col2.button("B. A few people you know"):
+        next_question("B")
+        st.rerun()
+
+elif st.session_state.soalan_ke == 2:
+    st.header("Soalan 2")
+    st.write("Do you prefer logic or emotion?")
+    
+    col1, col2 = st.columns(2)
+    if col1.button("A. Logic"):
+        next_question("A")
+        st.rerun()
+    if col2.button("B. Emotion"):
+        next_question("B")
+        st.rerun()
+
+# --- RESULT ---
+else:
+    st.header("Keputusan Anda!")
+    st.write(f"Jawapan yang anda pilih: {st.session_state.jawapan}")
+    if st.button("Ulang Semula"):
+        st.session_state.soalan_ke = 1
+        st.session_state.jawapan = []
+        st.rerun()
 # Ujian Personaliti MBTI - 100 Soalan
 
 skorE = skorI = 0
